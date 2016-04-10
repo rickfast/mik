@@ -91,7 +91,8 @@ fn read_file(path: &str) -> Result<String, Error> {
     let mut file = File::open(path).unwrap();
     let mut buffer = String::new();
 
-    file.read_to_string(&mut buffer);
-
-    Ok(buffer)
+    match file.read_to_string(&mut buffer) {
+        Err(f) => { panic!(f.to_string()) }
+        _ => Ok(buffer)
+    }
 }
