@@ -90,3 +90,9 @@ To run the image:
 $ docker build -t my-image .
 $ docker run -e SOME_VALUE=foo my-image
 ```
+
+# Development
+
+* Github: [https://github.com/rickfast/mik](https://github.com/rickfast/mik)
+* Slack: [mik-template.slack.com](https://mik-template.slack.com/)
+* Bintray: [https://bintray.com/rickfast/mik/mik/view](https://bintray.com/rickfast/mik/mik/view)
