@@ -33,3 +33,21 @@ hello {
   home_dir: /Users/rickfast
 }
 ```
+
+## Using in Docker
+
+File `entrypoint.sh`:
+
+```sh
+#! /usr/bin/env bash
+mik -f hello.hcl
+exec your-program -config hello.hcl
+```
+
+File `Dockerfile`:
+
+```Dockerfile
+FROM alpine
+RUN some crap here
+ENTRYPOINT ["entrypoint.sh"]
+```
