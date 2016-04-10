@@ -18,7 +18,7 @@ File: `hello.hcl`
 
 ```hcl
 hello {
-  home_dir: {{ HOME }}
+  home_dir: {{ HOME_DIR }}
 }
 ```
 
@@ -48,10 +48,25 @@ mik -f hello.hcl
 exec your-program -config hello.hcl
 ```
 
+File `hello.hcl`:
+
+```hcl
+hello {
+  some_value: {{ SOME_VALUE }}
+}
+```
+
 File `Dockerfile`:
 
 ```Dockerfile
 FROM alpine
 RUN some crap here
 ENTRYPOINT ["entrypoint.sh"]
+```
+
+To run the image:
+
+```sh
+$ docker build -t my-image .
+$ docker run -e SOME_VALUE=foo my-image
 ```
