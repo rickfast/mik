@@ -2,6 +2,10 @@
 
 Mik is a simple tool that renders mustache template files on the file system using environment variables as the model. The primary use case for Mik is to easily containerize applications that require configuration files. Mik allows you to create the configuration file using `-e` with `docker run`.
 
+## Get mik
+
+Download the Linux binary here: [https://bintray.com/artifact/download/rickfast/mik/linux_amd64/mik]
+
 ## Running mik
 
 Mik only takes two options, both optional. The first is `-f` for the target file or directory to render. If the argument to `-f` is a single file, then only the single file will be rendered. If the argument is a directory, then mik will recurse the directory hierarchy and render all files.
