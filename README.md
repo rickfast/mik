@@ -8,6 +8,24 @@ Mik is a simple tool that renders mustache template files on the file system usi
 
 Download the Linux binary here: [https://bintray.com/artifact/download/rickfast/mik/linux_amd64/mik]
 
+## Compiling for Linux using Docker
+
+You can build Mik for linux (for instance on your Mac) using a dockerized build environment.  Here's how:
+
+```
+docker run -it --rm -v $(pwd):/source jimmycuadra/rust cargo build
+```
+
+The resulting binary lives at: `target/debug/mik`
+
+Add the `--release` flag to create an optimized version for release.  Its also smaller :)
+
+```
+docker run -it --rm -v $(pwd):/source jimmycuadra/rust cargo build --release
+```
+
+This optimized version can be found at `target/release/mik`
+
 ## Running mik
 
 Mik only takes two options, both optional. The first is `-f` for the target file or directory to render. If the argument to `-f` is a single file, then only the single file will be rendered. If the argument is a directory, then mik will recurse the directory hierarchy and render all files.
