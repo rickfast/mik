@@ -1,0 +1,9 @@
+[package]
+name = "mik"
+version = "0.0.1"
+authors = [ "Your name <you@example.com>" ]
+
+[dependencies]
+walkdir = "0.1"
+mustache = "*"
+getopts = "0.2"
