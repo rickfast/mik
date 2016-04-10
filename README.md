@@ -1,5 +1,7 @@
 # mik
 
+[![Travis](https://img.shields.io/travis/rust-lang/rust.svg)](https://img.shields.io/travis/rickfast/mik.svg)
+
 Mik is a simple tool that renders mustache template files on the file system using environment variables as the model. The primary use case for Mik is to easily containerize applications that require configuration files. Mik allows you to create the configuration file using `-e` with `docker run`.
 
 ## Get mik
